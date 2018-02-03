@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/zd-1.0.css">
+</head>
+<body>
+<nav>
+	<!-- logo -->
+	<div class="nav-logo">
+		<a href="###"><img src="img/logo.png" alt=""></a>
+	</div>
+
+	<!-- 控制menu -->
+	<div class="nav-menu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<!-- 菜单 -->
+	<ul class="nav-list">
+		<li>
+			<a href="" class="active">首页<div class="carect"></div></a>
+			<ul class="menu">
+				<li><a href="">不断学习</a></li>
+				<li><a href="">不断进步</a></li>
+			</ul>
+		</li>
+		<li><a href="">我是</a></li>
+		<li><a href="">一个</a></li>
+		<li><a href="">热爱</a></li>
+		<li><a href="">Web</a></li>
+		<li><a href="">前端</a></li>
+		<li><a href="">的有</a></li>
+		<li><a href="">为青</a></li>
+		<li><a href="">年！</a></li>
+	</ul>
+</nav>
+
+</body>
+<script src="js/jq.js"></script>
+<script>
+	$(document).click(function(){
+		$('.nav-list').removeClass('open')
+	})
+	$('.nav-menu,.nav-list').click(function(e){e.stopPropagation()})
+	$('nav').find('.nav-menu').click(function(e){
+		$('.nav-list').toggleClass('open')
+	})
+</script>
+</html>

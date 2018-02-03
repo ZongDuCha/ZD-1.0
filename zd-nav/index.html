@@ -24,7 +24,7 @@
 	<!-- 菜单 -->
 	<ul class="nav-list">
 		<li>
-			<a href="" class="active">首页<div class="carect"></div></a>
+			<a href="" class="active" data-stop='true'>首页<div class="carect"></div></a>
 			<ul class="menu">
 				<li><a href="">不断学习</a></li>
 				<li><a href="">不断进步</a></li>
@@ -44,12 +44,20 @@
 </body>
 <script src="js/jq.js"></script>
 <script>
-	$(document).click(function(){
-		$('.nav-list').removeClass('open')
-	})
-	$('.nav-menu,.nav-list').click(function(e){e.stopPropagation()})
-	$('nav').find('.nav-menu').click(function(e){
-		$('.nav-list').toggleClass('open')
-	})
+$('nav a').click(function(){
+    if($(window).width() < 770){
+        if($(this).attr('data-pre') || $(this).children('.carect')[0].className == 'carect'){
+            return false;
+        }
+    }
+})
+$(document).click(function(){
+    $('.nav-list').removeClass('open')
+})
+$('.nav-menu,.nav-list').click(function(e){e.stopPropagation()})
+
+$('nav').find('.nav-menu').click(function(e){
+    $('.nav-list').toggleClass('open')
+})
 </script>
 </html>

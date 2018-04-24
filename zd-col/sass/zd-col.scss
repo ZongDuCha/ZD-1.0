@@ -86,7 +86,8 @@ p,a,li,ul,ol,dd,dt,div,h1,h2,h3,h4,h5{
     display: block;
     letter-spacing: 0.5px;
     text-decoration: none;
-    color:#000;
+        color: #3a3939;
+    text-align: justify;
     word-wrap: break-word;
     @include clearFloat();
 }
